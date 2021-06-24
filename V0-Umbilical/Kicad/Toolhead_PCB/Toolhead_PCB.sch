@@ -14,12 +14,12 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Connector_Generic:Conn_02x07_Top_Bottom J1
+L Connector_Generic:Conn_02x08_Top_Bottom J1
 U 1 1 60B6E959
 P 2250 1600
 F 0 "J1" H 2300 2117 50  0000 C CNN
-F 1 "Conn_02x07_Top_Bottom" H 2300 2026 50  0000 C CNN
-F 2 "Toolhead_PCB:Molex_Micro-Fit_3.0_43045-1400_2x07_P3.00mm_Horizontal" H 2250 1600 50  0001 C CNN
+F 1 "Conn_02x08Top_Bottom" H 2300 2026 50  0000 C CNN
+F 2 "Connector_Molex:Molex_Micro-Fit_3.0_43045-1600_2x08_P3.00mm_Horizontal" H 2250 1600 50  0001 C CNN
 F 3 "~" H 2250 1600 50  0001 C CNN
 	1    2250 1600
 	1    0    0    -1  
@@ -49,12 +49,12 @@ $EndComp
 $Comp
 L Toolhead_PCB:GND #PWR0101
 U 1 1 60B72ECC
-P 1800 2150
-F 0 "#PWR0101" H 1800 1900 50  0001 C CNN
-F 1 "GND" H 1805 1977 50  0000 C CNN
-F 2 "" H 1800 2150 50  0001 C CNN
-F 3 "" H 1800 2150 50  0001 C CNN
-	1    1800 2150
+P 1800 2450
+F 0 "#PWR0101" H 1800 2200 50  0001 C CNN
+F 1 "GND" H 1805 2277 50  0000 C CNN
+F 2 "" H 1800 2450 50  0001 C CNN
+F 3 "" H 1800 2450 50  0001 C CNN
+	1    1800 2450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -67,8 +67,6 @@ Wire Wire Line
 	1700 1600 2050 1600
 Wire Wire Line
 	2050 1700 1800 1700
-Wire Wire Line
-	1800 1700 1800 2150
 Wire Wire Line
 	2050 1800 1300 1800
 Wire Wire Line
@@ -201,20 +199,56 @@ Heater2
 $Comp
 L Connector_Generic:Conn_01x02 J8
 U 1 1 60BD21F9
-P 3400 2350
-F 0 "J8" H 3550 2300 50  0000 C CNN
-F 1 "Part Cooling Fan" H 3950 2300 50  0000 C CNN
-F 2 "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical" H 3400 2350 50  0001 C CNN
-F 3 "~" H 3400 2350 50  0001 C CNN
-	1    3400 2350
+P 3950 3300
+F 0 "J8" H 4100 3250 50  0000 C CNN
+F 1 "Part Cooling Fan" H 4500 3250 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical" H 3950 3300 50  0001 C CNN
+F 3 "~" H 3950 3300 50  0001 C CNN
+	1    3950 3300
 	1    0    0    1   
 $EndComp
-Text Label 2750 2250 0    50   ~ 0
+Text Label 3300 3200 0    50   ~ 0
 PartFan+
-Text Label 2750 2350 0    50   ~ 0
+Text Label 3300 3300 0    50   ~ 0
 PartFan-
 Wire Wire Line
-	2750 2250 3200 2250
+	3300 3200 3750 3200
 Wire Wire Line
-	2750 2350 3200 2350
+	3300 3300 3750 3300
+$Comp
+L Connector_Generic:Conn_01x03 J9
+U 1 1 60D33AC2
+P 3450 2100
+F 0 "J9" H 3600 2050 50  0000 C CNN
+F 1 "SuperPINDA" H 4000 2050 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical" H 3450 2100 50  0001 C CNN
+F 3 "~" H 3450 2100 50  0001 C CNN
+	1    3450 2100
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	1800 1700 1800 2450
+$Comp
+L Toolhead_PCB:GND #PWR0103
+U 1 1 60D3E32F
+P 3250 2300
+F 0 "#PWR0103" H 3250 2050 50  0001 C CNN
+F 1 "GND" H 3255 2127 50  0000 C CNN
+F 2 "" H 3250 2300 50  0001 C CNN
+F 3 "" H 3250 2300 50  0001 C CNN
+	1    3250 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 2300 3250 2200
+Wire Wire Line
+	2550 2000 3250 2000
+Wire Wire Line
+	3250 2100 2050 2100
+Wire Wire Line
+	2050 2100 2050 2000
+Text Label 2600 2000 0    50   ~ 0
+5V
+Text Label 2600 2100 0    50   ~ 0
+Z-Endstop
 $EndSCHEMATC
