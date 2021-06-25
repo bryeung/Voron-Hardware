@@ -124,12 +124,12 @@ Wire Wire Line
 Wire Wire Line
 	5450 950  5450 1100
 $Comp
-L Connector_Generic:Conn_02x07_Top_Bottom J1
+L Connector_Generic:Conn_02x08_Top_Bottom J1
 U 1 1 607F3FB4
 P 4550 2550
 F 0 "J1" H 4600 2025 50  0000 C CNN
 F 1 "Conn_02x08_Odd_Even" H 4600 2116 50  0000 C CNN
-F 2 "Connector_Molex:Molex_Micro-Fit_3.0_43045-1412_2x07_P3.00mm_Vertical" H 4550 2550 50  0001 C CNN
+F 2 "Connector_Molex:Molex_Micro-Fit_3.0_43045-1612_2x08_P3.00mm_Vertical" H 4550 2550 50  0001 C CNN
 F 3 "~" H 4550 2550 50  0001 C CNN
 	1    4550 2550
 	1    0    0    -1  
@@ -148,8 +148,6 @@ Wire Wire Line
 	4850 2650 5500 2650
 Wire Wire Line
 	5750 2750 4850 2750
-Wire Wire Line
-	4850 2850 5750 2850
 $Comp
 L power:GND #PWR0101
 U 1 1 60815C41
@@ -349,4 +347,70 @@ Text GLabel 1200 3200 0    50   Input ~ 0
 Connection ~ 4150 1250
 Text GLabel 1200 3100 0    50   Input ~ 0
 DataOut2
+$Comp
+L Connector_Generic:Conn_01x03 J15
+U 1 1 60D727BD
+P 5650 3050
+F 0 "J15" H 5730 3042 50  0000 L CNN
+F 1 "SuperPINDA" H 5730 2951 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical" H 5650 3050 50  0001 C CNN
+F 3 "~" H 5650 3050 50  0001 C CNN
+	1    5650 3050
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	5450 2950 4850 2950
+Wire Wire Line
+	5450 3050 4350 3050
+Wire Wire Line
+	4350 3050 4350 2950
+Wire Wire Line
+	4850 2850 5750 2850
+$Comp
+L power:GND #PWR0104
+U 1 1 60D78E0D
+P 5450 3250
+F 0 "#PWR0104" H 5450 3000 50  0001 C CNN
+F 1 "GND" H 5455 3077 50  0000 C CNN
+F 2 "" H 5450 3250 50  0001 C CNN
+F 3 "" H 5450 3250 50  0001 C CNN
+	1    5450 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 3150 5450 3250
+Text Label 4850 2950 0    50   ~ 0
+5V
+Text Label 5050 3050 0    50   ~ 0
+Z-Endstop
+$Comp
+L Connector_Generic:Conn_01x02 J14
+U 1 1 60D7A20D
+P 5500 3700
+F 0 "J14" H 5800 3600 50  0000 C CNN
+F 1 "Exhaust Fan In" H 5900 3700 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical" H 5500 3700 50  0001 C CNN
+F 3 "~" H 5500 3700 50  0001 C CNN
+	1    5500 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J13
+U 1 1 60D7AB0F
+P 4300 3700
+F 0 "J13" H 4600 3600 50  0000 C CNN
+F 1 "Exhaust Fan Out" H 4700 3700 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical" H 4300 3700 50  0001 C CNN
+F 3 "~" H 4300 3700 50  0001 C CNN
+	1    4300 3700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 3700 5300 3700
+Wire Wire Line
+	4500 3800 5300 3800
+Text Label 4600 3700 0    50   ~ 0
+ExhaustFan-
+Text Label 4600 3800 0    50   ~ 0
+ExhaustFan+
 $EndSCHEMATC
